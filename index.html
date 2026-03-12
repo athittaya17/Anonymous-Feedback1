@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>University Issue System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h2>University Feedback</h2>
+
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('report')">Report Issue</button>
+<button onclick="showPage('track')">Track Issue</button>
+<a href="admin-login.html"><button>Admin</button></a>
+</nav>
+</header>
+
+
+<!-- HOME -->
+<section id="home" class="page active">
+
+<div class="hero">
+
+<h1>ระบบแจ้งปัญหาภายในมหาวิทยาลัย</h1>
+
+<p>แจ้งปัญหา ข้อเสนอแนะ และติดตามผลได้อย่างโปร่งใส</p>
+
+<button onclick="showPage('report')">แจ้งปัญหา</button>
+
+</div>
+
+</section>
+
+
+
+<!-- REPORT -->
+
+<section id="report" class="page">
+
+<div class="card">
+
+<h2>แจ้งปัญหา</h2>
+
+<form id="feedbackForm">
+
+<select id="category">
+<option>การเรียน</option>
+<option>อาจารย์</option>
+<option>ระบบมหาวิทยาลัย</option>
+<option>อื่นๆ</option>
+</select>
+
+<textarea id="message" placeholder="รายละเอียดปัญหา"></textarea>
+
+<button type="submit">ส่งเรื่อง</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- TRACK -->
+
+<section id="track" class="page">
+
+<div class="card">
+
+<h2>ติดตามเรื่อง</h2>
+
+<input id="trackID" placeholder="Tracking ID">
+
+<button onclick="trackIssue()">ตรวจสอบ</button>
+
+<div id="trackResult"></div>
+
+</div>
+
+</section>
+
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

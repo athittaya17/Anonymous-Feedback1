@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin();loadIssues();">
+
+<header>
+
+<h2>Admin Dashboard</h2>
+
+<button onclick="logout()">Logout</button>
+
+</header>
+
+<input id="searchBox" placeholder="Search" onkeyup="searchIssue()">
+
+<div id="issueList"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
